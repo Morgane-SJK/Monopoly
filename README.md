@@ -89,3 +89,37 @@ Si le projet Visual Studio se nomme Monopoly, il suit donc cette structure :
 │
 └───Monopoly.sln
 ```
+
+## Exemple de partie
+
+1- Tout d'abord, on renseigne le nombre de tours, le nombre de joueurs ainsi que leurs noms.
+
+<p align='center'>
+ <img src="./images/game_1.png" width="700">
+</p>
+
+2- Tour 1 : Solène lance les dés et achète la propriété de la case 5 (250€).
+
+<p align='center'>
+ <img src="./images/game_2.png" width="700">
+</p>
+
+3- Tour 1 : Morgane lance les dés et achète la propriété de la case 11 (550€).
+
+<p align='center'>
+ <img src="./images/game_3.png" width="700">
+</p>
+
+4- Tour 2 : Solène lance les dés et tombe sur la case 11 (sur la propriété de Morgane) donc lui doit de l'argent (55€).
+
+<p align='center'>
+ <img src="./images/game_4.png" width="700">
+</p>
+
+5- Tour 2 : Morgane lance les dés et tombe sur la case 17 donc pioche une carte et reçoit 100€.
+
+<p align='center'>
+ <img src="./images/game_5.png" width="700">
+</p>
+
+Si le jeu devait s'arrêter maintenant, Solène serait la gagnante car elle possède plus d'argent.
