@@ -19,7 +19,7 @@ Il est joué à l’aide d’un plateau circulaire, possédant 40 positions. Cha
 Une liste de règles à respecter nous était donnée. Elles concernaient principalement les actions à suivre lorsqu’un joueur obtient deux dés identiques ou est en prison. Nos hypothèses de conception sont les suivantes :
 
 - A propos des positions sur le plateau :
-- 
+
 Il y a 40 cases. Grâce au *Factory pattern*, nous avons créé différents types de cases :
 
 •	**Case 0 : DEPART**
@@ -58,3 +58,34 @@ Le jeu peut également prendre fin d’une autre manière : lorsqu’un joueur d
 **Diagramme séquence**
 
 Le diagramme séquence est situé dans le dossier images. La structure globale du jeu y est représentée : les différentes boucles et parties du jeu. Dans cet exemple, le joueur est situé sur la case DEPART, et lances les dés. Il n’est pas en prison donc nous utilisons la NotInJailStrategy. Il arrive sur une propriété donc les règles de cette case sont affichées et nous lui demandons s’il souhaite acheter cette propriété (car elle n’a pas encore de propriétaire). Il répond oui donc nous regardons s’il possède assez d’argent, c’est le cas donc il devient le propriétaire. Il n’a pas obtenu un double en lançant les dés donc il ne peut pas rejouer. C’est au joueur suivant de jouer. Le tour change car le joueur précédent était le dernier du tour à jouer.
+
+
+## Structure des fichiers
+
+Le projet comporte 11 classes : Board, Dices, Location, Location_Chance_Community, Location_Factory, Location_Jail, Location_Property, Monopoly_Games, Observer, Player et Program.
+
+Le Program.cs contient tous les tests du jeu.
+
+Si le projet Visual Studio se nomme Monopoly, il suit donc cette structure :
+
+```dir
+│___Monopoly
+│       bin
+│       obj
+│       Properties
+│       App.config
+│       Board.cs
+│       Dices.cs
+│       Monopoly.csproj
+│       Location.cs
+│       Location_Chance_Community.cs
+│       Location_Factory.cs
+│       Location_Jail.cs
+│       Location_Property.cs
+│       Monopoly_Game.cs
+│       Observer.cs
+│       Player.cs
+│       Program.cs
+│
+└───Monopoly.sln
+```
